@@ -12,10 +12,10 @@ const PostsPage = (props) => {
     <div className="posts-container-wrapper">
       {
       props.data.map((post)=>{
-return <Post  post={post}/>;
+return <Post key={props.data.username} post={post}/>;
 
       })
-      /* map through data here */}
+  }
     </div>
   );
 };

@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className="App">
       <SearchBar />
-      <PostsPage data={dummyData}/>
+      <PostsPage  data={dummyData}/>
       {/* Add components here  and pass props where appropriate */}
     </div>
   );
