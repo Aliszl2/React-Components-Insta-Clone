@@ -74,16 +74,17 @@ const dummyData = [
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
             {
-                username: "Donald J. Trump ",
-                text: "China, chana, china!"
+                username: "Fake Newwws!",
+                text: "Fake News"
+                
             },
             {
                 username: "biancasaurus",
-                text: "Looks delicious!"
+                text: "China china china!"
             },
             {
                 username: "martinseludo",
-                text: "Can't wait to try it!"
+                text: "Build a big wall!"
             }
         ]
     },

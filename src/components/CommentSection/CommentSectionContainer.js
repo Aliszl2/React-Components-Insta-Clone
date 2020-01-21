@@ -4,9 +4,11 @@ import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import "./Comment.css";
 
+
+
 const CommentSection = props => {
   // Add state for the comments
-console.log(props.comments);
+  // console.log(props.addNewComment);
   return (
     <div>
       {
@@ -15,7 +17,7 @@ console.log(props.comments);
         return <Comment comment ={comment}/>;
       })
       }
-      <CommentInput key={props.username}/>
+      <CommentInput addNewComment={props.addNewComment} />
     </div>
   );
 };

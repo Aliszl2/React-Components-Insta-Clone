@@ -15,15 +15,30 @@ import dummyData from "./dummy-data";
 
 const App = () => {
   const [searchInput, setSearchInput] = useState("");
+  const[newComment, setComment]=useState({
+    username:"",
+    text:""
+  });
+  const addNewComment=(cmt)=>{
+    console.log(cmt);
+    const newComment ={
+      ...cmt,
+      id: Date.now()
+    }
+    setComment([...dummyData, newComment])
+  }
+// console.log(props.comments);
+
   const handleChange = event => {
     setSearchInput(event.target.value);
   };
+ 
   // console.log(searchInput);
-  const filteredPosts = dummyData.filter(charachters => 
+  const filteredPosts = dummyData.filter(characters => 
     // console.log(charachters);
-    charachters.username.toLowerCase().includes(searchInput.toLowerCase())
+    characters.username.toLowerCase().includes(searchInput.toLowerCase())
   );
-  console.log(filteredPosts);
+  // console.log(filteredPosts);
   return (
     <div className="App">
       <SearchBar
@@ -34,6 +49,7 @@ const App = () => {
       />
       <PostsPage
         data={filteredPosts}
+        addNewComment={addNewComment}
         // filteredPosts={filteredPosts}
         // data={dummyData}
       />

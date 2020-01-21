@@ -8,8 +8,11 @@ import PostHeader from "./PostHeader";
 import "./Posts.css";
 
 const Post = props => {
+  console.log(props.addNewComment);
   // set up state for the likes
   const [likes, setLikes] = useState(props.post.likes);
+
+  
   return (
     <div className="post-border">
       <PostHeader
@@ -27,6 +30,7 @@ const Post = props => {
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
+        addNewComment={props.addNewComment}
       />
     </div>
   );

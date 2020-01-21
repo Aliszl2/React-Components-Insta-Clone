@@ -7,10 +7,11 @@ import "./Posts.css";
 const PostsPage = props => {
   // console.log(props);
   // console.log(props.data);
+  console.log(props.addNewComment)
   return (
     <div className="posts-container-wrapper">
       {props.data.map(post => {
-        return <Post key={props.data.username} post={post} />;
+        return <Post key={props.data.username} post={post} addNewComment={props.addNewComment} />;
       })}
     </div>
   );
