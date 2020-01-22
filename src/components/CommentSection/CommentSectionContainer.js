@@ -4,13 +4,20 @@ import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import "./Comment.css";
 
+
+
 const CommentSection = props => {
   // Add state for the comments
-
+  // console.log(props.addNewComment);
   return (
     <div>
-      {/* map through the comments data and return the Comment component */}
-      <CommentInput />
+      {
+      /* map through the comments data and return the Comment component */
+      props.comments.map((comment)=>{
+        return <Comment comment ={comment}/>;
+      })
+      }
+      <CommentInput addNewComment={props.addNewComment} />
     </div>
   );
 };
