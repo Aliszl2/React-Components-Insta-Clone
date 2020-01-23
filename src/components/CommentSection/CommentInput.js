@@ -16,7 +16,7 @@ const CommentInput = props => {
         props.submitComment(newComment);
         // Empty state 
         addComment({
-          username: '',
+          username: 'Ali',
           text: ''
         });
       }}
