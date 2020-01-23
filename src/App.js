@@ -15,18 +15,18 @@ import dummyData from "./dummy-data";
 
 const App = () => {
   const [searchInput, setSearchInput] = useState("");
-  const[newComment, setComment]=useState({
-    username:"",
-    text:""
-  });
-  const addNewComment=(cmt)=>{
-    console.log(cmt);
-    const newComment ={
-      ...cmt,
-      id: Date.now()
-    }
-    setComment([...dummyData, newComment])
-  }
+  // const[newComment, setComment]=useState({
+  //   username:"",
+  //   text:""
+  // });
+  // const addNewComment=(cmt)=>{
+  //   console.log(cmt);
+  //   const newComment ={
+  //     ...cmt,
+  //     id: Date.now()
+  //   }
+  //   setComment([...dummyData, newComment])
+  // }
 // console.log(props.comments);
 
   const handleChange = event => {
@@ -49,7 +49,7 @@ const App = () => {
       />
       <PostsPage
         data={filteredPosts}
-        addNewComment={addNewComment}
+        // addNewComment={addNewComment}
         // filteredPosts={filteredPosts}
         // data={dummyData}
       />
